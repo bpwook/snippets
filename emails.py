@@ -56,7 +56,7 @@ class OneDigestEmail(webapp.RequestHandler):
     def post(self):
         user = user_from_email(self.request.get('email'))
         d = date_for_retrieval()
-        all_snippets = Snippet.all().filter("date =", d).fetch(500)
+        all_snippets = Snippet.all().filter("date >=", d).fetch(500)
         all_users = User.all().fetch(500)
         following = compute_following(user, all_users)
         logging.info(all_snippets)
