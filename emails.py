@@ -9,9 +9,7 @@ from dateutil import *
 from model import *
 
 REMINDER = """
-Hey nerd,
-
-The kids want to know what you're up to. Don't leave 'em hanging.
+It's time for daily work record.
 """
 
 class ReminderEmail(webapp.RequestHandler):
